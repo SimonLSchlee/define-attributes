@@ -1,6 +1,7 @@
 #lang info
 (define collection "define-attributes")
-(define deps '("base"))
+(define deps '("base" "define-attributes-lib"))
+(define implies '("define-attributes-lib"))
 (define build-deps '("pict-lib" "scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/define-attributes.scrbl" ())))
 (define pkg-desc "a macro for accessing attributes with a common prefix and optionally renamed name mappings")
