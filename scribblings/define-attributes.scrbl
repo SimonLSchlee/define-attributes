@@ -28,7 +28,7 @@ Its implementation was improved by feedback from the @hyperlink["https://racket.
   The @racket[id] can be renamed to nothing in that case the binding name is only created with the @racket[attribute].
 
   @emph{Another way to describe this is:}@linebreak{}
-  The cross product of the @racket[id]s with the @racket[attribute]s creates a resulting matrix of new bindings.
+  The different combinations of the @racket[id]s with the @racket[attribute]s creates a resulting matrix of new bindings.
 
   Lets say we have @racket[l] and @racket[r] defined as in the gif image above:
   @racketblock[
