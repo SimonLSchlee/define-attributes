@@ -16,9 +16,21 @@ jobs:
           distribution: full
           variant: ${{ matrix.racket-variant }}
           version: ${{ matrix.racket-version }}
+      - name: Installing define-attributes-lib and its dependencies
+        working-directory: ./define-attributes-lib
+        run: raco pkg install --no-docs --auto --name define-attributes-lib
+      - name: Compiling define-attributes-lib and building its docs
+        working-directory: ./define-attributes-lib
+        run: raco setup --check-pkg-deps --unused-pkg-deps define-attributes-lib
+      - name: Testing define-attributes-lib
+        working-directory: ./define-attributes-lib
+        run: raco test -x -p define-attributes-lib
       - name: Installing define-attributes and its dependencies
+        working-directory: ./define-attributes
         run: raco pkg install --no-docs --auto --name define-attributes
       - name: Compiling define-attributes and building its docs
+        working-directory: ./define-attributes
         run: raco setup --check-pkg-deps --unused-pkg-deps define-attributes
       - name: Testing define-attributes
+        working-directory: ./define-attributes
         run: raco test -x -p define-attributes
