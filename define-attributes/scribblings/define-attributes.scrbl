@@ -86,6 +86,13 @@ Its implementation was improved by feedback from the @hyperlink["https://racket.
   (racketblock
   (define-attributes ([l o])  vec3- (x y z)) ; ox oy oz
   (define-attributes ([l l.]) vec3- (x y z)) ; l.x l.y l.z
+
+  (define (x² x) (* x x))
+  (define (vec3-length v)
+    (define-attributes ([v]) vec3- (x y z))
+    (sqrt (+ (x² x) (x² y) (x² z))))
+
+  ; vec3-length accessed/computed as if it were an attribute
   (define-attributes ([l])    vec3- (x y z [length len]))  ; x y z len
   )
 }
