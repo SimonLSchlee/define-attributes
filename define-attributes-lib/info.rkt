@@ -6,4 +6,4 @@
 (define pkg-desc "a macro for accessing attributes with a common prefix and optionally renamed name mappings")
 (define version "0.1")
 (define pkg-authors '("schlee.simon@gmail.com"))
-(define license '(MIT))
+(define license 'MIT)
